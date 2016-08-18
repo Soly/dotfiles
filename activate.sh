@@ -1,5 +1,5 @@
 #!/bin/sh
 
 ln -sf .vim/vimrc ~/.vimrc
-cd ~/.vimrc
+cd ~/.vim
 git submodule update --init
