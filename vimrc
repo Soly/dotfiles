@@ -12,8 +12,6 @@ set ttimeout
 set ttimeoutlen=0
 
 set autoread
-set nobackup
-set noswapfile
 set nu
 
 set incsearch
@@ -26,6 +24,22 @@ set tabstop=4
 set noerrorbells
 set visualbell
 set t_vb=
+
+" backup, swap, undo
+if isdirectory($HOME . '/.vim/tmp/backup') == 0
+    :silent !mkdir -p ~/.vim/tmp/backup >/dev/null 2>&1
+end
+set backupdir=~/.vim/tmp/backup//
+
+if isdirectory($HOME . '/.vim/tmp/swap') == 0
+    :silent !mkdir -p ~/.vim/tmp/swap >/dev/null 2>&1
+endif
+set directory=~/.vim/tmp/swap//
+
+if isdirectory($HOME . '/.vim/tmp/undo') == 0
+    :silent !mkdir -p ~/.vim/tmp/undo > /dev/null 2>&1
+endif
+set undodir=~/.vim/tmp/undo//
 
 " remaps
 inoremap fd <ESC>
