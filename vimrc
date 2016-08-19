@@ -90,8 +90,11 @@ let g:gundo_right=1
 
 " dwm
 let g:dwm_map_keys=0
+let g:dwm_master_pane_width="60%"
 nnoremap <silent><leader>o :call DWM_New()<cr>
 nnoremap <silent><leader>g :call DWM_Focus()<cr>
+nnoremap <silent><C-l> :call DWM_GrowMaster()<cr>
+nnoremap <silent><C-h> :call DWM_ShrinkMaster()<cr>
 
 " airline
 set laststatus=2
