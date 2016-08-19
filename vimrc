@@ -96,6 +96,21 @@ nnoremap <silent><leader>g :call DWM_Focus()<cr>
 nnoremap <silent><C-l> :call DWM_GrowMaster()<cr>
 nnoremap <silent><C-h> :call DWM_ShrinkMaster()<cr>
 
+"Zoom / Restore window.
+function! s:ZoomToggle() abort
+    if exists('t:zoomed') && t:zoomed
+        execute t:zoom_winrestcmd
+        let t:zoomed = 0
+    else
+        let t:zoom_winrestcmd = winrestcmd()
+        resize
+        vertical resize
+        let t:zoomed = 1
+    endif
+endfunction
+command! ZoomToggle call s:ZoomToggle()
+nnoremap <silent><leader>z :ZoomToggle<CR>
+
 " airline
 set laststatus=2
 let g:airline_powerline_fonts=1
