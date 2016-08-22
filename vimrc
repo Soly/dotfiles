@@ -84,6 +84,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeQuitOnOpen=1
 
+" NERDcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+
 " gundo
 nnoremap <leader>u :GundoToggle<cr>
 let g:gundo_right=1
