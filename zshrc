@@ -59,7 +59,7 @@ export ZSH_TMUX_AUTOCONNECT=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux ssh-agent)
+plugins=(git tmux)
 
 # User configuration
 
@@ -94,6 +94,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# On babun/cygwin/windows, use pageant and ssh-pageant for ssh-agent and forwarding
 if [ $(uname -o) "==" "Cygwin" ];
 then
     alias open="cygstart"
