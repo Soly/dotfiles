@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-if [ $(uname -o) == "Cygwin" ];
+if [ $(uname -o) "==" "Cygwin" ];
 then
     ZSH_THEME="babun"
 else
@@ -58,8 +58,10 @@ plugins=(git)
 
 # User configuration
 
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/packer:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-
+export VAGRANT_DETECTED_OS=cygwin
+export userprofile=/c/Users/Salomon/
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -87,7 +89,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-  if [ $(uname -o) == "Cygwin" ];
+  if [ $(uname -o) "==" "Cygwin" ];
   then
     alias open="cygstart"
+    eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME") &> /dev/null
   fi
