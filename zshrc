@@ -50,11 +50,16 @@ fi
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# tmux plugin config
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART_ONCE=true
+export ZSH_TMUX_AUTOCONNECT=true
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git tmux ssh-agent)
 
 # User configuration
 
@@ -89,8 +94,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-  if [ $(uname -o) "==" "Cygwin" ];
-  then
+if [ $(uname -o) "==" "Cygwin" ];
+then
     alias open="cygstart"
     eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME") &> /dev/null
-  fi
+fi
