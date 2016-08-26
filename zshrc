@@ -51,7 +51,7 @@ fi
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # tmux plugin config
-if [ -n $SSH_CONNECTION ];
+if [[ -z $SSH_CONNECTION ]];
 then
     export ZSH_TMUX_AUTOSTART=true
     export ZSH_TMUX_AUTOSTART_ONCE=true
