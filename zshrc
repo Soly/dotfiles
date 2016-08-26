@@ -51,9 +51,12 @@ fi
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # tmux plugin config
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOSTART_ONCE=true
-export ZSH_TMUX_AUTOCONNECT=true
+if [ -n $SSH_CONNECTION ];
+then
+    export ZSH_TMUX_AUTOSTART=true
+    export ZSH_TMUX_AUTOSTART_ONCE=true
+    export ZSH_TMUX_AUTOCONNECT=true
+fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
