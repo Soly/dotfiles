@@ -41,6 +41,10 @@ if isdirectory($HOME . '/.vim/tmp/undo') == 0
 endif
 set undodir=~/.vim/tmp/undo//
 
+" Filetype prefs
+autocmd Filetype c setlocal ts=2 sts=2 sw=2
+
+
 " remaps
 inoremap fd <ESC>
 vnoremap fd <ESC>
