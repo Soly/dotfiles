@@ -135,3 +135,4 @@ let g:vimtex_latexmk_callback=0
 
 " vim-template
 let g:templates_directory = "~/.vim/templates"
+let g:vimtex_latexmk_options = "-pdf"
