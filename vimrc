@@ -129,3 +129,6 @@ let g:syntastic_python_flake8_args='--ignore=E501'
 
 " ansible
 let g:ansible_options = {'ignore_blank_lines': 0}
+
+" vimtex
+let g:vimtex_latexmk_callback=0
