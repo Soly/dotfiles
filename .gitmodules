@@ -25,3 +25,6 @@
 [submodule "vim/bundle/vimtex"]
 	path = vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "vim/bundle/vim-template"]
+	path = vim/bundle/vim-template
+	url = https://github.com/aperezdc/vim-template.git
