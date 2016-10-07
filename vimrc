@@ -49,10 +49,10 @@ autocmd Filetype c setlocal ts=2 sts=2 sw=2
 inoremap fd <ESC>
 vnoremap fd <ESC>
 
-noremap J <pagedown>
-noremap K <pageup>
-noremap H <home>
-noremap L <end>
+"" emacs style line navigation
+"" I figure this is more valuable than <C-a> for increment. Will remap that later.
+noremap <C-a> <home>
+noremap <C-e> <end>
 
 " leader
 let mapleader = "\<SPACE>"
