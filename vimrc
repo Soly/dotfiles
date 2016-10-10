@@ -126,6 +126,7 @@ let g:airline_theme="murmur"
 
 " syntastic
 let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " ansible
 let g:ansible_options = {'ignore_blank_lines': 0}
