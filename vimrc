@@ -53,6 +53,8 @@ vnoremap fd <ESC>
 "" I figure this is more valuable than <C-a> for increment. Will remap that later.
 noremap <C-a> <home>
 noremap <C-e> <end>
+nnoremap <silent> j gj
+nnoremap <silent> k gk
 
 " leader
 let mapleader = "\<SPACE>"
@@ -133,6 +135,7 @@ let g:ansible_options = {'ignore_blank_lines': 0}
 
 " vimtex
 let g:vimtex_latexmk_callback=0
+let g:vimtex_latexmk_continuous=0
 
 " vim-template
 let g:templates_directory = "~/.vim/templates"
