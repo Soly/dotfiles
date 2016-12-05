@@ -136,7 +136,7 @@ let g:ansible_options = {'ignore_blank_lines': 0}
 " vimtex
 let g:vimtex_latexmk_callback=0
 let g:vimtex_latexmk_continuous=0
+let g:vimtex_latexmk_options = "-pdf"
 
 " vim-template
 let g:templates_directory = "~/.vim/templates"
-let g:vimtex_latexmk_options = "-pdf"
