@@ -43,6 +43,8 @@ set undodir=~/.vim/tmp/undo//
 
 " Filetype prefs
 autocmd Filetype c setlocal ts=2 sts=2 sw=2
+autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 
 " remaps
@@ -81,6 +83,7 @@ nmap <leader>h <C-w>h
 nmap <leader>l <C-w>l
 
 " pathogen
+let g:pathogen_disabled = []
 execute pathogen#infect()
 
 " NERDtree
@@ -139,4 +142,7 @@ let g:vimtex_latexmk_continuous=0
 let g:vimtex_latexmk_options = "-pdf"
 
 " vim-template
-let g:templates_directory = "~/.vim/templates"
+let g:templates_directory = ['~/.vim/templates']
+
+" vim-jsx
+let g:jsx_ext_required = 0
