@@ -51,10 +51,6 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 inoremap fd <ESC>
 vnoremap fd <ESC>
 
-"" emacs style line navigation
-"" I figure this is more valuable than <C-a> for increment. Will remap that later.
-noremap <C-a> <home>
-noremap <C-e> <end>
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
@@ -87,6 +83,11 @@ nmap <leader>l <C-w>l
 " pathogen
 let g:pathogen_disabled = []
 execute pathogen#infect()
+
+" Unite
+map <leader>bb :Unite buffer<cr>
+let g:unite_prompt = "➤ "
+
 
 " NERDtree
 map <leader><leader> :NERDTreeToggle<cr>
