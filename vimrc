@@ -58,6 +58,8 @@ noremap <C-e> <end>
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
+set pastetoggle=<F2>
+
 " leader
 let mapleader = "\<SPACE>"
 let g:mapleader = "\<SPACE>"
