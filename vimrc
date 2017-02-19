@@ -46,6 +46,8 @@ autocmd Filetype c setlocal ts=2 sts=2 sw=2
 autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
+" Auto remove trailing whitespace (this is desirable almost 100% of the time)
+autocmd FileType c,cpp,python,ruby,java,elixir,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " remaps
 inoremap fd <ESC>
