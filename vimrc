@@ -151,3 +151,7 @@ let g:templates_directory = ['~/.vim/templates']
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" elm-vim
+let g:elm_format_autosave = 1
+let g:elm_setup_keybindings = 0
