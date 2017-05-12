@@ -1,8 +1,36 @@
-" misc
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'duggiefresh/vim-easydir'
+Plugin 'tpope/vim-rsi'
+Plugin 'sjl/gundo.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'aperezdc/vim-template'
+Plugin 'ap/vim-css-color'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'ElmCast/elm-vim'
+Plugin 'lervag/vimtex'
+Plugin 'chase/vim-ansible-yaml'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
+
+" misc
 set noshowmode
-filetype plugin on
-filetype indent on
 
 syntax on
 
@@ -82,14 +110,9 @@ nmap <leader>k <C-w>k
 nmap <leader>h <C-w>h
 nmap <leader>l <C-w>l
 
-" pathogen
-let g:pathogen_disabled = []
-execute pathogen#infect()
-
 " Unite
 map <leader>bb :Unite buffer<cr>
 let g:unite_prompt = "➤ "
-
 
 " NERDtree
 map <leader><leader> :NERDTreeToggle<cr>
@@ -132,7 +155,8 @@ nnoremap <silent><leader>z :ZoomToggle<CR>
 " airline
 set laststatus=2
 let g:airline_powerline_fonts=1
-let g:airline_theme="murmur"
+" let g:airline_theme="murmur"
+let g:airline_theme="solarized"
 
 " syntastic
 let g:syntastic_python_flake8_args='--ignore=E501'

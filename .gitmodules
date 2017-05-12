@@ -1,57 +1,6 @@
-[submodule "vim/bundle/gundo.vim"]
-	path = vim/bundle/gundo.vim
-	url = http://github.com/sjl/gundo.vim.git
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "vim/bundle/vim-airline-themes"]
-	path = vim/bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "vim/bundle/vim-ansible-yaml"]
-	path = vim/bundle/vim-ansible-yaml
-	url = https://github.com/chase/vim-ansible-yaml.git
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-[submodule "vim/bundle/vimtex"]
-	path = vim/bundle/vimtex
-	url = https://github.com/lervag/vimtex.git
-[submodule "vim/bundle/vim-template"]
-	path = vim/bundle/vim-template
-	url = https://github.com/aperezdc/vim-template.git
-[submodule "vim/bundle/vim-python-pep8-indent"]
-	path = vim/bundle/vim-python-pep8-indent
-	url = https://github.com/hynek/vim-python-pep8-indent.git
-[submodule "vim/bundle/vim-easydir"]
-	path = vim/bundle/vim-easydir
-	url = https://github.com/duggiefresh/vim-easydir.git
-[submodule "vim/bundle/vim-jsx"]
-	path = vim/bundle/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
-[submodule "vim/bundle/vim-javascript"]
-	path = vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
-[submodule "vim/bundle/vim-elixir"]
-	path = vim/bundle/vim-elixir
-	url = https://github.com/elixir-lang/vim-elixir.git
-[submodule "vim/bundle/unite.vim"]
-	path = vim/bundle/unite.vim
-	url = https://github.com/Shougo/unite.vim.git
-[submodule "vim/bundle/vim-rsi"]
-	path = vim/bundle/vim-rsi
-	url = https://github.com/tpope/vim-rsi.git
-[submodule "vim/bundle/vim-css-color"]
-	path = vim/bundle/vim-css-color
-	url = https://github.com/ap/vim-css-color.git
-[submodule "vim/bundle/elm-vim"]
-	path = vim/bundle/elm-vim
-	url = https://github.com/ElmCast/elm-vim.git
+[submodule ".zprezto"]
+	path = .zprezto
+	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "vim/bundle/Vundle.vim"]
+	path = vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git

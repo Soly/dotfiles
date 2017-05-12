@@ -3,3 +3,6 @@
 *.pyc
 *.pyx
 tmux.current.conf
+vim/bundle
+.zcompdump
+.zhistory
