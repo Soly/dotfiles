@@ -4,7 +4,8 @@ git submodule update --init --recursive
 vim +PluginInstall +qall
 dotfiles="tmux.conf vim vimrc zshrc"
 dotdir=$HOME/.dotfiles
+[[ $(uname -s) = "Linux" ]] && opts="snf" || opts="shf"  # BSD (i.e. MacOS) has this no follow option as h
 for dotfile in $dotfiles; do
-    ln -shf "$dotdir/$dotfile" "$HOME/.$dotfile"
+    ln -"$opts" "$dotdir/$dotfile" "$HOME/.$dotfile"
 done
 
