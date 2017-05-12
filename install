@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+git submodule update --init --recursive
+vim +PluginInstall +qall
 dotfiles="tmux.conf vim vimrc zshrc"
 dotdir=$HOME/.dotfiles
 for dotfile in $dotfiles; do
-    ln -sf "$dotdir/$dotfile" "$HOME/.$dotfile"
+    ln -shf "$dotdir/$dotfile" "$HOME/.$dotfile"
 done
 
