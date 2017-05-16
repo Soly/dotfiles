@@ -53,6 +53,10 @@ set noerrorbells
 set visualbell
 set t_vb=
 
+if has('mouse')
+    set mouse=a
+endif
+
 " backup, swap, undo
 if isdirectory($HOME . '/.vim/tmp/backup') == 0
     :silent !mkdir -p ~/.vim/tmp/backup >/dev/null 2>&1
