@@ -7,6 +7,12 @@ HISTFILE=$HOME/.zhistory
 
 export EDITOR='vim'
 
+# Stolen from oh-my-zsh
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
 # On babun/cygwin/windows, use pageant and ssh-pageant for ssh-agent and forwarding
 # TODO: Update this to be lsw friendly (and let's finally deprecate cygwin)
 # if [[ $(uname -o) = "Cygwin" ]];
