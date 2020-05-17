@@ -1,34 +1,26 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'duggiefresh/vim-easydir'
-Plugin 'tpope/vim-rsi'
-Plugin 'sjl/gundo.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'aperezdc/vim-template'
-Plugin 'ap/vim-css-color'
-Plugin 'rust-lang/rust.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'ElmCast/elm-vim'
-Plugin 'lervag/vimtex'
-Plugin 'chase/vim-ansible-yaml'
-
-" All of your Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on
+call plug#begin('~/.vim/bundle')
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'duggiefresh/vim-easydir'
+Plug 'tpope/vim-rsi'
+Plug 'sjl/gundo.vim'
+Plug 'Shougo/unite.vim'
+Plug 'aperezdc/vim-template'
+Plug 'ap/vim-css-color', {'for': 'css'}
+Plug 'rust-lang/rust.vim', {'for': 'rs'}
+Plug 'pangloss/vim-javascript', {'for': 'js'}
+Plug 'mxw/vim-jsx', {'for': 'js'}
+Plug 'hynek/vim-python-pep8-indent', {'for': 'py'}
+Plug 'elixir-lang/vim-elixir', {'for': 'ex'}
+Plug 'ElmCast/elm-vim', {'for': 'elm'}
+Plug 'lervag/vimtex', {'for': ['tex', 'latex']}
+Plug 'chase/vim-ansible-yaml', {'for': 'yaml'}
+call plug#end()
 
 " misc
 set noshowmode
@@ -122,7 +114,6 @@ let g:unite_prompt = "➤ "
 " NERDtree
 map <leader><leader> :NERDTreeToggle<cr>
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufEnter * lcd %:p:h
 let NERDTreeQuitOnOpen=1

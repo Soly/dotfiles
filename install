@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-
-git submodule update --init --recursive
-vim +PluginInstall +qall
 dotfiles="tmux.conf vim vimrc zshrc"
 dotdir=$HOME/.dotfiles
 [[ $(uname -s) = "Linux" ]] && opts="snf" || opts="shf"  # BSD (i.e. MacOS) has this no follow option as h
 for dotfile in $dotfiles; do
     ln -"$opts" "$dotdir/$dotfile" "$HOME/.$dotfile"
 done
+# config is the root of nvim configuration
+mkdir -p $HOME/.config
+ln -"$opts" "$dotdir/nvim" "$HOME/.config/nvim"
 
+git submodule update --init --recursive
+vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
