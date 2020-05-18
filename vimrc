@@ -23,9 +23,11 @@ Plug 'chase/vim-ansible-yaml', {'for': 'yaml'}
 call plug#end()
 
 " misc
-set noshowmode
+syntax enable
+set background=dark
+colorscheme solarized
 
-syntax on
+set noshowmode
 
 set timeout
 set timeoutlen=250

@@ -7,6 +7,9 @@ zstyle ':prompt:pure:git:dirty' color yellow
 
 HISTFILE=$HOME/.zhistory
 
+if which nvim; then
+    alias vim=nvim
+fi
 export EDITOR='vim'
 
 # Stolen from oh-my-zsh
