@@ -1,6 +1,8 @@
 set nocompatible
 
 call plug#begin('~/.vim/bundle')
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
@@ -9,7 +11,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'duggiefresh/vim-easydir'
 Plug 'tpope/vim-rsi'
 Plug 'sjl/gundo.vim'
-Plug 'Shougo/unite.vim'
 Plug 'aperezdc/vim-template'
 Plug 'ap/vim-css-color', {'for': 'css'}
 Plug 'rust-lang/rust.vim', {'for': 'rs'}
@@ -109,9 +110,11 @@ nmap <leader>k <C-w>k
 nmap <leader>h <C-w>h
 nmap <leader>l <C-w>l
 
-" Unite
-map <leader>bb :Unite buffer<cr>
-let g:unite_prompt = "➤ "
+" fzf
+let g:fzf_command_prefix='Fzf'
+nmap <leader>f :FzfFiles<cr>
+nmap <leader>bb :FzfBuffers<cr>
+nmap <leader>g :FzfLines<cr>
 
 " NERDtree
 map <leader><leader> :NERDTreeToggle<cr>
@@ -132,7 +135,7 @@ let g:gundo_right=1
 let g:dwm_map_keys=0
 let g:dwm_master_pane_width="60%"
 nnoremap <silent><leader>o :call DWM_New()<cr>
-nnoremap <silent><leader>g :call DWM_Focus()<cr>
+nnoremap <silent><leader>d :call DWM_Focus()<cr>
 nnoremap <silent><C-l> :call DWM_GrowMaster()<cr>
 nnoremap <silent><C-h> :call DWM_ShrinkMaster()<cr>
 

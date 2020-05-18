@@ -18,6 +18,8 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
+source $HOME/.dotfiles/zsh/fzf.zsh
+
 # On babun/cygwin/windows, use pageant and ssh-pageant for ssh-agent and forwarding
 # TODO: Update this to be lsw friendly (and let's finally deprecate cygwin)
 # if [[ $(uname -o) = "Cygwin" ]];

@@ -4,5 +4,6 @@
 *.pyx
 tmux.current.conf
 vim/bundle
+vim/.netrwhist
 .zcompdump
 .zhistory
