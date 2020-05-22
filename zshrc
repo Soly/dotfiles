@@ -7,7 +7,7 @@ zstyle ':prompt:pure:git:dirty' color yellow
 
 HISTFILE=$HOME/.zhistory
 
-if which nvim; then
+if $(which nvim > /dev/null); then
     alias vim=nvim
 fi
 export EDITOR='vim'
