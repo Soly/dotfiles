@@ -150,6 +150,7 @@ return {
         "python",
         "query",
         "regex",
+        "rust",
         "tsx",
         "typescript",
         "vim",
@@ -259,6 +260,7 @@ return {
             fallback()
           end
         end, { "i", "s" }),
+        ["<C-g>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "s" }),
       })
     end,
   },
